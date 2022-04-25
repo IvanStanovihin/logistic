@@ -8,6 +8,7 @@ import com.graphhopper.ResponsePath;
 import com.graphhopper.config.Profile;
 import ru.stanovihin.model.GeographyPoint;
 
+import javax.annotation.PostConstruct;
 import java.util.Locale;
 
 public class GraphHopperService {

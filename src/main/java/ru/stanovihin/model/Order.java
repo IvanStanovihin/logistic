@@ -30,7 +30,7 @@ public class Order {
 
     @Override
     public String toString() {
-        return "Order{" +
+        return "\nOrder{" +
                 "point=" + point +
                 ", cargoWeight=" + cargoWeight +
                 '}';

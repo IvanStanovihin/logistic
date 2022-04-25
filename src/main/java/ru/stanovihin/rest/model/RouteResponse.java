@@ -1,20 +1,18 @@
 package ru.stanovihin.rest.model;
 
-import ru.stanovihin.model.Order;
-
 public class RouteResponse {
 
-    private RouteList[]groupedRoutes;
+    private OrdersList[]groupedRoutes;
 
-    public RouteResponse(RouteList[] groupedRoutes) {
+    public RouteResponse(OrdersList[] groupedRoutes) {
         this.groupedRoutes = groupedRoutes;
     }
 
-    public RouteList[] getGroupedRoutes() {
+    public OrdersList[] getGroupedRoutes() {
         return groupedRoutes;
     }
 
-    public void setGroupedRoutes(RouteList[] groupedRoutes) {
+    public void setGroupedRoutes(OrdersList[] groupedRoutes) {
         this.groupedRoutes = groupedRoutes;
     }
 }
