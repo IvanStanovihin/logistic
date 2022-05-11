@@ -1,11 +1,10 @@
-package ru.stanovihin.rest.service;
+package ru.stanovihin.service.logic;
 
-import ru.stanovihin.model.Order;
-import ru.stanovihin.rest.model.Driver;
-import ru.stanovihin.rest.model.OrdersList;
+import ru.stanovihin.model.database.Order;
+import ru.stanovihin.model.database.Driver;
+import ru.stanovihin.model.database.OrderList;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class WeightService {
 
@@ -14,8 +13,8 @@ public class WeightService {
 
     }
 
-    public ArrayList<OrdersList>splitByWeight(ArrayList<Driver>freeDrivers, ArrayList<Order> routeForOrders){
-        ArrayList<OrdersList>allOrdersList = new ArrayList<>();
+    public ArrayList<OrderList>splitByWeight(ArrayList<Driver>freeDrivers, ArrayList<Order> routeForOrders){
+        ArrayList<OrderList> allOrderList = new ArrayList<>();
         ArrayList<Order>ordersForSplitting = new ArrayList<>(routeForOrders);
         ArrayList<Driver>driversForSplitting = new ArrayList<>(freeDrivers);
         int pointer = 0;
@@ -23,14 +22,14 @@ public class WeightService {
             ordersForSplitting.stream().forEach(System.out::println);
             Driver currentDriver = driversForSplitting.get(0);
             driversForSplitting.remove(0);
-            OrdersList ordersList = getOrdersList(currentDriver, ordersForSplitting);
-            allOrdersList.add(ordersList);
+            OrderList orderList = getOrdersList(currentDriver, ordersForSplitting);
+            allOrderList.add(orderList);
         }
-        return allOrdersList;
+        return allOrderList;
     }
 
-    private OrdersList getOrdersList(Driver driver, ArrayList<Order>ordersForSplitting){
-        OrdersList ordersList = new OrdersList();
+    private OrderList getOrdersList(Driver driver, ArrayList<Order>ordersForSplitting){
+        OrderList orderList = new OrderList();
         double truckWeightLimit = driver.getTruck().getMaxWeight();
         Order currentOrder = ordersForSplitting.get(0);
         double orderWeight = currentOrder.getCargoWeight();
@@ -39,9 +38,9 @@ public class WeightService {
             currentOrder = ordersForSplitting.get(0);
             ordersForSplitting.remove(0);
             routeWeight += orderWeight;
-            ordersList.addOrder(currentOrder);
+            orderList.addOrder(currentOrder);
             orderWeight = currentOrder.getCargoWeight();
         }
-        return ordersList;
+        return orderList;
     }
 }

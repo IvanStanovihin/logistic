@@ -1,11 +1,11 @@
-package ru.stanovihin.rest.service;
+package ru.stanovihin.service.logic;
 
 import ru.stanovihin.logic.MatrixProcessor;
-import ru.stanovihin.model.GeographyPoint;
-import ru.stanovihin.model.Order;
-import ru.stanovihin.rest.model.Driver;
-import ru.stanovihin.rest.model.OrdersList;
-import ru.stanovihin.rest.model.Truck;
+import ru.stanovihin.model.database.GeographyPoint;
+import ru.stanovihin.model.database.Order;
+import ru.stanovihin.model.database.Driver;
+import ru.stanovihin.model.database.OrderList;
+import ru.stanovihin.model.database.Truck;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -33,9 +33,9 @@ public class RoutingService {
         greedyRoute.stream().forEach(System.out::println);
         System.out.println("Суммарное расстояние: " + greedyService.getSummaryDistance());
         ArrayList<Driver>testDrivers = getTestDrivers();
-        ArrayList<OrdersList>ordersList = weightService.splitByWeight(testDrivers, greedyRoute);
+        ArrayList<OrderList> orderList = weightService.splitByWeight(testDrivers, greedyRoute);
         System.out.println("Маршрутные листы разбитые по весу: ");
-        Stream.of(ordersList).forEach(System.out::println);
+        Stream.of(orderList).forEach(System.out::println);
         return greedyRoute;
     }
 

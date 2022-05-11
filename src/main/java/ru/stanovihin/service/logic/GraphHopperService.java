@@ -1,4 +1,4 @@
-package ru.stanovihin;
+package ru.stanovihin.service.logic;
 
 import ru.stanovihin.GraphHopperException.RouteErrorException;
 import com.graphhopper.GHRequest;
@@ -6,9 +6,8 @@ import com.graphhopper.GHResponse;
 import com.graphhopper.GraphHopper;
 import com.graphhopper.ResponsePath;
 import com.graphhopper.config.Profile;
-import ru.stanovihin.model.GeographyPoint;
+import ru.stanovihin.model.database.GeographyPoint;
 
-import javax.annotation.PostConstruct;
 import java.util.Locale;
 
 public class GraphHopperService {

@@ -1,8 +1,21 @@
-package ru.stanovihin.rest.model;
+package ru.stanovihin.model.database;
 
+import com.carrotsearch.hppc.HashOrderMixing;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "truck")
 public class Truck {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column
     private double maxWeight;
+
+    @Column
     private String modelName;
 
     public Truck(double maxWeight, String modelName) {

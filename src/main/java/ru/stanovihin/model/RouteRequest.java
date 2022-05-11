@@ -1,6 +1,6 @@
-package ru.stanovihin.rest.model;
+package ru.stanovihin.model;
 
-import ru.stanovihin.model.Order;
+import ru.stanovihin.model.database.Order;
 
 import java.util.Arrays;
 

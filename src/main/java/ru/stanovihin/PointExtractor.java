@@ -1,6 +1,6 @@
 package ru.stanovihin;
 
-import ru.stanovihin.model.GeographyPoint;
+import ru.stanovihin.model.database.GeographyPoint;
 
 import java.io.BufferedReader;
 import java.io.IOException;

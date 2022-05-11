@@ -1,11 +1,7 @@
 package ru.stanovihin;
 
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
-import ru.stanovihin.model.GeographyPoint;
+import ru.stanovihin.model.database.GeographyPoint;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class MainOffline {

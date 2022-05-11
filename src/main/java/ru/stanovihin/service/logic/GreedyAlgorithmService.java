@@ -1,6 +1,6 @@
-package ru.stanovihin.rest.service;
+package ru.stanovihin.service.logic;
 
-import ru.stanovihin.model.Order;
+import ru.stanovihin.model.database.Order;
 
 import java.util.ArrayList;
 import java.util.Arrays;

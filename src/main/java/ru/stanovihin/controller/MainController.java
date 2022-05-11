@@ -1,14 +1,13 @@
-package ru.stanovihin.rest.controller;
+package ru.stanovihin.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import ru.stanovihin.model.Order;
-import ru.stanovihin.rest.model.RouteRequest;
-import ru.stanovihin.rest.model.RouteResponse;
-import ru.stanovihin.rest.service.RoutingService;
-import ru.stanovihin.rest.service.WeightService;
+import ru.stanovihin.model.database.Order;
+import ru.stanovihin.model.RouteRequest;
+import ru.stanovihin.model.RouteResponse;
+import ru.stanovihin.service.logic.RoutingService;
+import ru.stanovihin.service.logic.WeightService;
 
 import javax.annotation.PostConstruct;
 import java.util.Arrays;

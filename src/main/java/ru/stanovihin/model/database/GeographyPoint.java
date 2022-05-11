@@ -1,4 +1,4 @@
-package ru.stanovihin.model;
+package ru.stanovihin.model.database;
 
 public class GeographyPoint {
     private String address;

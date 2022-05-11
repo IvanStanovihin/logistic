@@ -1,20 +1,20 @@
-package ru.stanovihin.rest.model;
+package ru.stanovihin.model.database;
 
-import ru.stanovihin.model.Order;
+import ru.stanovihin.model.database.Order;
 
 import java.util.ArrayList;
 
-public class OrdersList {
+public class OrderList {
 
     private ArrayList<Order> groupOrder;
     private Double summaryWeight;
 
-    public OrdersList(){
+    public OrderList(){
         this.groupOrder = new ArrayList<>();
         this.summaryWeight = 0.0;
     }
 
-    public OrdersList(ArrayList<Order> groupOrder, Double summaryWeight) {
+    public OrderList(ArrayList<Order> groupOrder, Double summaryWeight) {
         this.groupOrder = groupOrder;
         this.summaryWeight = summaryWeight;
     }

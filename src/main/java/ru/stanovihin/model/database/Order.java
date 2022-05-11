@@ -1,4 +1,6 @@
-package ru.stanovihin.model;
+package ru.stanovihin.model.database;
+
+import ru.stanovihin.model.database.GeographyPoint;
 
 public class Order {
 

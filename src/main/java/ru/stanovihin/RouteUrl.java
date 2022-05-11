@@ -1,6 +1,6 @@
 package ru.stanovihin;
 
-import ru.stanovihin.model.GeographyPoint;
+import ru.stanovihin.model.database.GeographyPoint;
 
 public class RouteUrl {
 

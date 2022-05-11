@@ -1,4 +1,6 @@
-package ru.stanovihin.rest.model;
+package ru.stanovihin.model.database;
+
+import ru.stanovihin.model.database.Truck;
 
 public class Driver {
 
